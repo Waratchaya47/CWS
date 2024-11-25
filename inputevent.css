@@ -1,0 +1,125 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #507F7A;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.back-button {
+    background-color: #365B6D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-icon, .home-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #FAF3DD; /* สีพื้นหลัง */
+    
+}
+.profile-icon:hover, .home-icon:hover {
+    background-color: white; /* สีเมื่อชี้เมาส์ */
+    transform: scale(1.1); /* ขยายขนาดเล็กน้อย */
+}
+.profile-icon img, .home-icon img {
+    width: 60%; /* ปรับขนาดภาพภายในวงกลม */
+    height: 60%; /* ปรับขนาดภาพภายในวงกลม */
+    border-radius: 50%; /* ทำให้ภาพเป็นวงกลม */
+    object-fit: cover; /* ปรับให้ภาพไม่เสียสัดส่วน */
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px; /* ขยายความกว้างสูงสุด */
+    gap: 20px;
+    margin: 0 auto; /* จัดให้อยู่กลาง */
+}
+
+.event-details, .additional-info {
+    width: 100%; /* ให้ขอบเท่ากันกับ .main-section */
+    background-color: #FAF3DD;
+    padding: 35px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 98%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+#event-description{
+    width: 96%; /* ให้ขอบเท่ากันกับ .main-section */
+    height: 60px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+#event-form {
+    width: 50%; /* เพิ่มความกว้างของฟอร์ม */
+    margin: 0 auto; /* จัดให้อยู่กลาง */
+}
+
+#submit-button {
+    background-color: #365B6D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+

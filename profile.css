@@ -1,0 +1,148 @@
+body{
+    background-color: #8FD9D9;
+    margin: 0;
+    font-size: 20px;
+}
+.proflie1 {
+    display: grid; 
+    grid-template-columns: 30% 70%; 
+    grid-template-rows: auto; 
+    background-color: #8fd9d9;
+}
+
+.menu {
+    grid-column: 1 / span 2; 
+    display: grid;
+    grid-template-columns: 30% auto 35%; 
+    
+}
+.home-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #365B6D; /* สีพื้นหลัง */
+    margin: 20px;
+    
+}
+.home-icon:hover {
+    background-color: #63a0b8; /* สีเมื่อชี้เมาส์ */
+    transform: scale(1.1); /* ขยายขนาดเล็กน้อย */
+}
+
+.home-icon img {
+    width: 60%; /* ปรับขนาดภาพภายในวงกลม */
+    height: 60%; /* ปรับขนาดภาพภายในวงกลม */
+    border-radius: 50%; /* ทำให้ภาพเป็นวงกลม */
+    object-fit: cover; /* ปรับให้ภาพไม่เสียสัดส่วน */
+}
+
+.event_hosted_button:hover, .event_part_button:hover{
+    background-color: #44718B;
+}
+
+.event_part_button,
+.event_hosted_button {
+    padding: 10px 20px;
+    background-color: #365B6D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 30px;
+}
+
+.event_part_button.active,
+.event_hosted_button.active {
+    background-color: #F5F5EF; /* สีพื้นหลังของปุ่มที่แอคทีฟ */
+    color: #365B6D; /* สีข้อความของปุ่มที่แอคทีฟ */
+    font-weight: bold;
+}
+
+
+.proflieinfo {
+    grid-column: 1; 
+}
+
+.LogoCWS_pic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90% ;
+    padding: 20px 0 ;
+    border-radius: 60% ;
+}
+.myInfo{
+    background-color: #44718B;
+    border: 3px ;
+    margin : 10px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px 0 ;
+}
+.event_part, .event_hosted {
+    grid-column: 2; 
+    background-color: #F5F5EF;
+}
+
+.coming_event {
+    background-color: #8FD9D9;
+    border: 3px ;
+    text-align: center;
+    border-radius: 10px;
+    margin : 30px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.past_event {
+    background-color: #44718B;
+    border: 3px ;
+    text-align: center;
+    border-radius: 10px;
+    margin : 30px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+}
+
+.eventpic{
+    width: auto;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.name_container{
+    background-color: #abe9cb;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    border-radius: 50px;
+    padding: 20px 20px;
+}
+
+.eventname{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.eventinfo {
+    border: 3px ;
+    margin : 30px;
+    text-align: center;
+    padding: 100px 100px;
+    border-radius: 10px;
+    margin-left: 100px;
+}

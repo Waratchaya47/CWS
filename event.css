@@ -1,0 +1,200 @@
+/* ส่วนของการตั้งค่าทั่วไป */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #CAD7D2;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F9F6E7;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #F9F6E7;
+    color: white;
+}
+
+#register-button {
+    background-color: #E99DA8;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 280px; /* กำหนดความกว้างคงที่ */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    
+}
+#register-button:hover {
+    background-color: #f77687;
+    transform: scale(1.1); /* ขยายขนาดเล็กน้อย */
+}
+#register-button.registered {
+    background-color: #aae9c9;
+    /* color: white; */
+    cursor: default;
+}
+
+.modal {
+    display: none; /* ซ่อน modal */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+    width: 70%;
+}
+
+#confirm-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #365B6D;
+    color: white;
+    width: 70%;
+    height: 50px;
+}
+#cancel-button{
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #f77687;
+    width: 70%;
+    height: 50px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-icon, .home-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #365B6D; /* สีพื้นหลัง */
+    
+}
+.profile-icon:hover, .home-icon:hover {
+    background-color: #63a0b8; /* สีเมื่อชี้เมาส์ */
+    transform: scale(1.1); /* ขยายขนาดเล็กน้อย */
+}
+
+
+.profile-icon img, .home-icon img {
+    width: 60%; /* ปรับขนาดภาพภายในวงกลม */
+    height: 60%; /* ปรับขนาดภาพภายในวงกลม */
+    border-radius: 50%; /* ทำให้ภาพเป็นวงกลม */
+    object-fit: cover; /* ปรับให้ภาพไม่เสียสัดส่วน */
+}
+
+
+
+
+/* ส่วนของเนื้อหา */
+.event-container {
+    display: grid;
+    grid-template-columns: 30% auto; 
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.poster-box {
+    width: 100%; /* ใช้ความกว้างเต็มพื้นที่ */
+    height: 400px; /* กำหนดความสูงคงที่ */
+    background-color: #365B6D;
+    padding: 0;
+    border-radius: 8px;
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center; /* จัดกลาง */
+    align-items: center; /* จัดกลาง */
+}
+
+.poster-box img {
+    width: 100%; /* ให้รูปภาพครอบคลุมพื้นที่ทั้งหมด */
+    height: 100%; /* รูปภาพจะขยายเต็มความสูงของกรอบ */
+    object-fit: cover; /* ทำให้รูปปรับขนาดให้พอดีกับกรอบโดยไม่เสียสัดส่วน */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.info-box {
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #97edf0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    grid-column: 1/ 2; /* ให้อยู่ในคอลัมน์แรก */
+}
+.details-box{
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #97edf0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    grid-column: 2 / 3;  /* ให้อยู่ในคอลัมน์ที่สอง */
+}
+
+.info-box h3, .details-box h3 {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: bold;
+    color: #365B6D;
+    margin: 20px 0;
+}
+
+.profile-icon {
+    cursor: pointer;
+}
+
+.home-icon {
+    cursor: pointer;
+}
+
+#event-description {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+    .event-container {
+        grid-template-columns: 1fr; /* แสดงในรูปแบบ 1 คอลัมน์เมื่อขนาดหน้าจอเล็กลง */
+    }
+}

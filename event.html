@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียด Event</title>
+    <link rel="stylesheet" href="event.css">
+    <script src="event.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button id="register-button">ลงทะเบียนเข้าร่วมงาน</button>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <p>คุณต้องการลงทะเบียนเข้าร่วมงานหรือไม่?</p>
+                    <button id="confirm-button">Click to confirm</button>
+                    <button id="cancel-button">Later</button>
+                </div>
+            </div>
+        
+            <div class="icons">
+                <a class="profile-icon">
+                    <img src="logo/profile_picture_user_icon_153847.png">
+                </a>
+                <a class="home-icon" id = "homeicon">
+                    <img src="logo/home_icon.png">
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="event-details"></div>
+                <h1 id = "event-title">Chiang Mai Cultural Night</h1>
+                <div class="event-container">
+                    <div class="poster-box">
+                        <img id = "poster" alt="Event Poster">
+                    </div>
+                    <div class="info-box">
+                        <h3>Event Information</h3>
+                        <p id = "event-date"></p>
+                        <p id = "event-time"></p>
+                        <p id = "event-location"></p>
+                    </div>
+                    <div class="details-box">
+                        <h3>About the Event</h3>
+                        <p id = "event-description">Chiang Mai Cultural Night is an event that showcases the rich culture of Chiang Mai. The event will feature traditional music, dance, and food. There will also be a market selling local handicrafts and souvenirs. Don't miss this opportunity to experience the beauty of Chiang Mai's culture!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

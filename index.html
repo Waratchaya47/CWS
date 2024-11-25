@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link type="text/css" rel="stylesheet" href="home.css">
+    <script src="home.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <button id = "create-event" class="nav-button" onclick = "window.location.href = 'inputevent.html'">จัด Event</button>
+        <input type="text" class="search-bar" placeholder="🔍 search">
+        <div class="auth-buttons">
+            <button id = "register" class="nav-button" onclick="window.location.href='register.html'">Register</button>
+            <button id = "login" class="nav-button" onclick="window.location.href='login.html'">Login</button>
+            <!-- เปลี่ยนเป็นรูป profile -->
+            <button id="logout" class="nav-button" style="display: none;" onclick="window.location.href='login.html'">Logout</button>
+            <button id="profile" class="profile" style="display: none;">My Profile</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+       
+    </div>
+</body>
+</html>

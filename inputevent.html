@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดจัด Event</title>
+    <link rel="stylesheet" href="inputevent.css">
+    <script src="inputevent.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-button">รายละเอียดจัด event</button>
+            <div class="icons">
+                <a class="profile-icon">
+                    <img src="logo/profile_picture_user_icon_153847.png">
+                </a>
+                <a class="home-icon" id = "homeicon">
+                    <img src="logo/home_icon.png">
+                </a>
+            </div>   
+        </div> 
+        <div class="content">
+            <form action="/event" method="post" enctype="multipart/form-data" id = "event-form">
+                <div class="main-section">
+                    <div class="event-details">
+                        <h1>รายละเอียดจัด Event</h1>
+                        <div class="form-group">
+                            <label for="location">สถานที่ (โชว์ไหน):</label>
+                            <select name="location" id = "location">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">วันที่:</label>
+                            <input type="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="time">เวลา:</label>
+                            <input type="time" name="time">
+                        </div>
+                        <div class="form-group">
+                            <label for="capacity">จำนวนคนที่คาดว่าสามารถรับได้:</label>
+                            <input type="number" name="capacity" placeholder="กรอกจำนวนคน">
+                        </div>
+
+                        <div class = "form-group">
+                            <label for = "event-image">Thumbnail:</label>
+                            <input type="file" name="event-image" id = "event-image" accept="image/*" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="event-poster">Poster:</label>
+                            <input type="file" name="event-poster" id = "event-poster" accept="image/*" required>
+                        </div>
+                    </div>
+
+                    <div class="additional-info">
+                        <h1>ข้อมูลเพิ่มเติม</h1>
+                        <h3>Event Description</h3>
+
+                        <div class = "form-group">
+                            <label for="event-name">ชื่อ Event:</label>
+                            <input type="text" name="event-name" id = "event-name" required>
+                        </div>
+
+                        <div class = "form-group">
+                            <label for="event-description">รายละเอียด Event:</label>
+                            <textarea name="event-description" id = "event-description"  required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "form-group">
+                    <button type="submit" id = "submit-button" class="submit-button">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
